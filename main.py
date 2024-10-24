@@ -327,7 +327,13 @@ import requests
 import random
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust this to restrict origins as needed
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # List of proxies to rotate
 proxies_list = [
     "20.111.54.16:8123",
