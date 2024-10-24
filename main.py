@@ -325,6 +325,7 @@ from fastapi.responses import StreamingResponse
 import yt_dlp
 import requests
 import random
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 app.add_middleware(
